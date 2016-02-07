@@ -158,6 +158,7 @@ header {
   ul, li {
     display: inline-block;
     padding-top: 30px;
+    text-align: right;
   }
 }
 
