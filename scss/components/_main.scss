@@ -18,8 +18,12 @@ html {
 }
 
 
+html{
+  background-color: $text-color;
+}
+
 body{
-  font-family: sans-serif;
+  font-family: $noto;
   @include zero;
   // Hides close button if there is no js
   &.noscript .close-btn,
@@ -31,6 +35,16 @@ body{
 header {
   padding: 0 1em;
   position: relative;
+  background-color: $blue;
+  font-family: $oswald;
+  color:$text-color;
+  border-bottom: 10px solid $green;
+}
+
+.sub,
+.name {
+  padding:0;
+  margin: 0;
 }
 
 .toggle-btn {
@@ -44,15 +58,14 @@ header {
   li{
     list-style-type: none;
     &:first-child a{
-      border-top: 1px solid $light-grey;
     }
   }
   a{
     padding: .5em 1em;
     display: block;
-    border-bottom: 1px solid $light-grey;
     text-decoration: none;
     color: $text-color;
+    background-color: $blue;
     text-align: center;
 
   }
@@ -61,13 +74,13 @@ header {
 .toggle-btn,
 .close-btn{
   color: $text-color;
+  font-size: 1.5em;
   text-decoration: none;
   height: 40px;
   width: 40px;
   &:before{
-    border: 1px solid $light-grey;
     display: inline-block;
-    padding: 13px 11px;
+    padding: 20px 11px;
     height: 40px;
     width:40px;
   }
@@ -119,6 +132,10 @@ header {
   .toggle-btn,
   .close-btn{
     display:none;
+  }
+
+   ul, li{
+    display: inline-block
   }
 }
 
